@@ -1,0 +1,78 @@
+generated: '2026-10-03'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 5
+  own: 5
+  other_domain: 0
+  platform: 0
+  roles:
+  - api
+  - other
+  - partner
+  - support
+  - website
+hosts:
+- host: api.arconnet.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: arconnet.com
+  role: api
+  relation: own
+- host: marketplace.arconnet.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: arconnet.com
+  role: other
+  relation: own
+- host: partners.arconnet.com
+  found_by:
+  - probed
+  - site-links
+  - namespace-probe
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  title: ARCON Keystone — Partner Portal
+  status: 200
+  registrable_domain: arconnet.com
+  role: partner
+  relation: own
+- host: support.arconnet.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - Support
+  serves: []
+  registrable_domain: arconnet.com
+  role: support
+  relation: own
+- host: www.arconnet.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Compliance
+  - Website
+  serves:
+  - cdn
+  vendor: cloudflare
+  registrable_domain: arconnet.com
+  role: website
+  relation: own

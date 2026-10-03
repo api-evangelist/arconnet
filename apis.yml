@@ -1,23 +1,63 @@
 aid: arconnet
+
 name: ARCON
-description: 'ARCON is a company surfaced via the API Evangelist harvest backlog (source: gartner-mq)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://cms.arconnet.com/wp-content/uploads/2026/08/Vertical_Logo_Full_JPEG.jpg
+
+description: 'ARCON provides runtime privilege security solutions that enforce just‑in‑time and just‑enough access for users, machines, and AI agents. Their platform evaluates identity, context, policy, and risk in real time to grant minimum necessary privileges, monitor usage, and automatically revoke access. ARCON serves enterprises across banking, telecom, utilities, government, healthcare, and education, helping reduce identity risk, accelerate compliance, and simplify governance through dynamic privilege lifecycle management.'
+
 url: https://raw.githubusercontent.com/api-evangelist/arconnet/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:gartner-mq
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-03 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-03'
+
 modified: '2026-10-03'
+
 tags:
 - Company
-apis: []
+- Security
+- Identity
+- AccessControl
+- Enterprise
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Compliance
+  url: https://www.arconnet.com/compliance
+- type: Security
+  url: security/arconnet-vulnerability-disclosure.yml
+- type: Hosts
+  url: hosts/arconnet-hosts.yml
+- type: Vendors
+  url: vendors/arconnet-vendors.yml
+- type: Support
+  url: https://support.arconnet.com/portal/en/home
+- type: TrustCenter
+  url: security/arconnet-trust-center.yml
+- type: VulnerabilityDisclosure
+  url: security/arconnet-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/arconnet-domain-security.yml
 - type: Website
   url: https://www.arconnet.com
+
+apis: []
+x-enrichment:
+  date: '2026-10-03'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
